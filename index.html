@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Passagem de Turno – Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+<div class="max-w-5xl mx-auto bg-white rounded shadow p-6 space-y-8">
+
+    <!-- CABEÇALHO -->
+    <div class="border-b pb-4">
+        <h1 class="text-2xl font-bold">🏨 Passagem de Turno – Hotel</h1>
+        <p class="text-sm text-gray-500">Registro operacional e financeiro</p>
+    </div>
+
+    <!-- DADOS DO TURNO -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div>
+            <label class="text-sm font-medium">Data</label>
+            <input type="date" class="w-full border rounded p-2">
+        </div>
+        <div>
+            <label class="text-sm font-medium">Horário</label>
+            <input type="time" class="w-full border rounded p-2">
+        </div>
+        <div>
+            <label class="text-sm font-medium">Turno</label>
+            <select class="w-full border rounded p-2">
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+        </div>
+        <div>
+            <label class="text-sm font-medium">Responsável</label>
+            <input type="text" class="w-full border rounded p-2">
+        </div>
+        <div>
+            <label class="text-sm font-medium">Para</label>
+            <input type="text" class="w-full border rounded p-2">
+        </div>
+    </div>
+
+    <!-- POLÍTICAS -->
+    <div class="border rounded p-4 space-y-3">
+        <h2 class="font-semibold">📌 Políticas Importantes</h2>
+
+        <ul class="list-disc list-inside text-sm space-y-1">
+            <li>Finais de semana: mínimo de <strong>2 diárias</strong></li>
+            <li>Descontos não são cumulativos</li>
+            <li>Parcela mínima: <strong>R$ 250,00</strong></li>
+            <li>Final de ano (dezembro, janeiro e carnaval): sem desconto fidelidade</li>
+            <li>Comprovantes de cartão: envio exclusivo à <strong>gerência</strong></li>
+        </ul>
+    </div>
+
+    <!-- FINANCEIRO -->
+    <div class="border rounded p-4 space-y-4">
+        <h2 class="font-semibold">💰 Resumo Financeiro</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <label class="text-sm">Caixa</label>
+                <input type="text" class="w-full border rounded p-2" placeholder="R$">
+            </div>
+            <div>
+                <label class="text-sm">Cartão</label>
+                <input type="text" class="w-full border rounded p-2" placeholder="R$">
+            </div>
+            <div>
+                <label class="text-sm">Observações</label>
+                <input type="text" class="w-full border rounded p-2">
+            </div>
+        </div>
+    </div>
+
+    <!-- HÓSPEDES -->
+    <div class="border rounded p-4 space-y-4">
+        <h2 class="font-semibold">📋 Resumo Operacional</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div>
+                <label class="text-sm">Hóspedes</label>
+                <input type="number" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label class="text-sm">Check-outs</label>
+                <input type="number" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label class="text-sm">Check-ins</label>
+                <input type="number" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label class="text-sm">Late Check-out</label>
+                <input type="number" class="w-full border rounded p-2">
+            </div>
+        </div>
+    </div>
+
+    <!-- COLMEIA E SECADORES -->
+    <div class="border rounded p-4 space-y-4">
+        <h2 class="font-semibold">🐝 Colmeia e Secadores</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="border rounded p-4">
+                <h3 class="font-medium mb-2">🔑 Chaves Extras</h3>
+                <div class="grid grid-cols-3 gap-3">
+                    <input type="number" placeholder="Total" class="border rounded p-2">
+                    <input type="number" placeholder="Disponível" class="border rounded p-2">
+                    <input type="number" placeholder="Em uso" class="border rounded p-2">
+                </div>
+            </div>
+
+            <div class="border rounded p-4">
+                <h3 class="font-medium mb-2">💨 Secadores</h3>
+                <div class="grid grid-cols-3 gap-3">
+                    <input type="number" placeholder="Total" class="border rounded p-2">
+                    <input type="number" placeholder="Disponível" class="border rounded p-2">
+                    <input type="number" placeholder="Em uso" class="border rounded p-2">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="font-medium mt-4 mb-2">🏨 Distribuição por Apartamento</h3>
+            <textarea rows="3" class="w-full border rounded p-2"
+                placeholder="Ex: 01 no apt 02, 01 no apt 06, 01 no apt 29..."></textarea>
+        </div>
+    </div>
+
+    <!-- PISCINA / OFURÔ -->
+    <div class="border rounded p-4 space-y-3">
+        <h2 class="font-semibold">🏊 Piscina / Ofurô</h2>
+
+        <label class="flex items-center gap-2">
+            <input type="checkbox"> Motor da piscina ligado
+        </label>
+        <label class="flex items-center gap-2">
+            <input type="checkbox"> Ofurô ligado
+        </label>
+
+        <p class="text-xs text-gray-500">
+            Piscina: ligar 10h / desligar 18h • LED até 22h<br>
+            Ofurô: desligar às 22h
+        </p>
+    </div>
+
+    <!-- LUZES E PORTAS -->
+    <div class="border rounded p-4 space-y-3">
+        <h2 class="font-semibold">💡 Luzes e Portas</h2>
+
+        <textarea rows="3" class="w-full border rounded p-2"
+            placeholder="Status das luzes, portas, portões e observações"></textarea>
+    </div>
+
+    <!-- OBSERVAÇÕES -->
+    <div>
+        <label class="text-sm font-medium">📝 Observações Gerais</label>
+        <textarea rows="4" class="w-full border rounded p-3"></textarea>
+    </div>
+
+    <!-- ASSINATURAS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t pt-4">
+        <div>
+            <label class="text-sm font-medium">Quem entrega</label>
+            <input type="text" class="w-full border rounded p-2">
+        </div>
+        <div>
+            <label class="text-sm font-medium">Quem recebe</label>
+            <input type="text" class="w-full border rounded p-2">
+        </div>
+    </div>
+    
+    <!-- CHAVES -->
+<div class="border rounded p-4 space-y-4">
+    <h2 class="font-semibold text-lg">🔑 Controle de Chaves</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div>
+            <label>Rouparia</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Depósito de Água</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Depósito Camareiras</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Bicicletário</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Portão Praia (Chave 1)</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Portão Praia (Chave 2)</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Chave Mestra</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Manutenção / Eletrônicos</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Aquecedor</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Copa Mamãe</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Ala Mar – Armário</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Sala da Gerência</label>
+            <input class="w-full border rounded p-2" value="EDSON">
+        </div>
+        <div>
+            <label>Depósito (Antiga Gerência)</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Portão de Entrega</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Porta da Manutenção</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+    </div>
+</div>
+
+<!-- CARTÕES -->
+<div class="border rounded p-4 space-y-4">
+    <h2 class="font-semibold text-lg">💳 Cartões – Recepção</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div>
+            <label>Cartão 1 Recepção</label>
+            <input class="w-full border rounded p-2" value="BALCÃO">
+        </div>
+        <div>
+            <label>Cartão 2 Recepção</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Data Card 1 e 2</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+        <div>
+            <label>Manutenção</label>
+            <input class="w-full border rounded p-2" value="GAVETA">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-4">
+        <div>
+            <label>Total de cartões – Camareiras</label>
+            <input type="number" class="w-full border rounded p-2" value="5">
+        </div>
+        <div>
+            <label>Cartões na gaveta</label>
+            <input type="number" class="w-full border rounded p-2" value="5">
+        </div>
+    </div>
+</div>
+
+<!-- STATUS PORTAS -->
+<div class="border rounded p-4 space-y-4">
+    <h2 class="font-semibold text-lg">🚪 Status – Aberto / Fechado</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+        <select class="border rounded p-2">
+            <option>Rouparia – FECHADO</option>
+            <option>Rouparia – ABERTO</option>
+        </select>
+        <select class="border rounded p-2">
+            <option>Portão Praia – FECHADO</option>
+            <option>Portão Praia – ABERTO</option>
+        </select>
+        <select class="border rounded p-2">
+            <option>Bicicletário – FECHADO</option>
+            <option>Bicicletário – ABERTO</option>
+        </select>
+        <select class="border rounded p-2">
+            <option>Portão Entrega – FECHADO</option>
+            <option>Portão Entrega – ABERTO</option>
+        </select>
+        <select class="border rounded p-2">
+            <option>Recepção – ABERTO</option>
+            <option>Recepção – FECHADO</option>
+        </select>
+    </div>
+</div>
+
+<!-- BATERIA E RÁDIOS -->
+<div class="border rounded p-4 space-y-4">
+    <h2 class="font-semibold text-lg">🔋 Bateria / 📻 Rádios</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div>
+            <label>Celular Recepção</label>
+            <input class="w-full border rounded p-2" value="BALCÃO">
+        </div>
+        <div>
+            <label>Celular Recepção 2</label>
+            <input class="w-full border rounded p-2" value="GERÊNCIA">
+        </div>
+        <div>
+            <label>Máquina Cartão 1</label>
+            <input class="w-full border rounded p-2" value="EM USO">
+        </div>
+        <div>
+            <label>Máquina Cartão 2</label>
+            <input class="w-full border rounded p-2" value="EM USO">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-4">
+        <div>
+            <label>Total de rádios</label>
+            <input type="number" class="w-full border rounded p-2" value="7">
+        </div>
+        <div>
+            <label>Rádios na recepção</label>
+            <input type="number" class="w-full border rounded p-2" value="7">
+        </div>
+    </div>
+</div>
+
+<!-- PÃES -->
+<div class="border rounded p-4 space-y-4">
+    <h2 class="font-semibold text-lg">🥖 Pães do Dia</h2>
+
+    <div class="grid grid-cols-2 gap-4">
+        <input type="number" class="border rounded p-2" placeholder="Quantidade total" value="25">
+        <input type="text" class="border rounded p-2" placeholder="Horário do pedido" value="00:00 – 03:00">
+    </div>
+</div>
+
+<!-- GELADEIRA -->
+<div class="border rounded p-4 space-y-4">
+    <h2 class="font-semibold text-lg">🧊 Geladeira – Recepção</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+        <label>Água c/ gás</label>
+        <input class="border rounded p-2" placeholder="Água c/ gás" value="20">
+        <label>Água s/ gás</label>
+        <input class="border rounded p-2" placeholder="Água s/ gás" value="15">
+        <label>Coca-Cola</label>
+        <input class="border rounded p-2" placeholder="Coca-Cola" value="14">
+        <label>Coca Zero</label>
+        <input class="border rounded p-2" placeholder="Coca Zero" value="7">
+        <label>Guaraná</label>
+        <input class="border rounded p-2" placeholder="Guaraná" value="19">
+        <label>Guaraná Zero</label>
+        <input class="border rounded p-2" placeholder="Guaraná Zero" value="10">
+        <label>Heineken</label>
+        <input class="border rounded p-2" placeholder="Heineken" value="25">
+        <label>Império</label>
+        <input class="border rounded p-2" placeholder="Império" value="4">
+    </div>
+</div>
+
+
+    <!-- BOTÃO -->
+    <div class="flex justify-end">
+        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">
+            Confirmar Passagem de Turno
+        </button>
+    </div>
+
+</div>
+
+</body>
+</html>
